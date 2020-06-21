@@ -115,7 +115,7 @@ virtualenv==15.2.0
 visions
 wcwidth==0.1.7
 websocket-client==0.16.0
-Werkzeug==0.8.3
+Werkzeug==0.15.3
 wget
 wheel==0.24.0
 wsgiref==0.1.2
