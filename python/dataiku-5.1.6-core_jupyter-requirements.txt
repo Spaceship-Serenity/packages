@@ -1,0 +1,26 @@
+## Pip-dependencies for installing and running the project.
+##  from: https://caremad.io/blog/setup-vs-requirement/
+#
+# Install it with:
+#   pip install -r requirements/exe.pip
+# --index-url https://pypi.python.org/simple/
+# --no-index --find-links=/datadrive/data_dir/uploads/packages/Z_AZ/datasets/vi_1 vi
+# -e .
+
+pandas==0.23.4
+python-dateutil==2.7.4
+pytz==2018.6
+requests==2.20.1
+
+decorator==4.3.0
+ipykernel==4.8.2
+ipython_genutils==0.2.0
+jupyter_client==5.2.3
+jupyter_core==4.4.0
+pexpect==4.6.0
+pickleshare==0.7.5
+ptyprocess==0.6.0
+pyzmq==17.1.2
+simplegeneric==0.8.1
+tornado==5.1.1
+traitlets==4.3.2
