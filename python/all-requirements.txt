@@ -87,7 +87,7 @@ pyzmq==17.1.2
 requests==2.20.1
 requests==2.5.3
 s3transfer==0.1.10
-scapy==2.4.0
+scapy==2.4.1
 scikit-image
 scikit-learn 
 scipy
