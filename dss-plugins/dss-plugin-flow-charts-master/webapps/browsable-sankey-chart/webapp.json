@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "label": "Sankey: browsable",
+        "description": "Browsable chart showing predecessors and successors of a given state",
+        "icon": "icon-random"
+    },
+    "baseType": "STANDARD",
+    "hasBackend": "false",
+    "chart" : {
+        "datasetParamName" : "dataset",
+        "topBar" : "STD_FORM",
+        "topBarParams" : [
+            {
+                "name": "from_col",
+                "type": "DATASET_COLUMN",
+                "datasetParamName": "dataset",
+                "label": "Origin column",
+                "description": "",
+                "mandatory": true
+            },
+            {
+                "name": "to_col",
+                "type": "DATASET_COLUMN",
+                "datasetParamName": "dataset",
+                "label": "Destination column",
+                "description": "",
+                "mandatory": true
+            },
+            {
+                "name": "weight_col",
+                "type": "DATASET_COLUMN",
+                "datasetParamName": "dataset",
+                "label": "Weight column",
+                "description": "",
+                "mandatory": false
+            }
+        ]
+    }
+}

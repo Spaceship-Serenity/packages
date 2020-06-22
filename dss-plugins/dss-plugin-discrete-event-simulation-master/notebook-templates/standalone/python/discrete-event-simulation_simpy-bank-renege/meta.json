@@ -1,0 +1,5 @@
+// This file is the descriptor for the Python Notebook Template dss-plugin-discrete-event-simulation_simpy-bank-renege
+{
+    "label": "An example of discrete-event simulation based on Simpy",
+    "shortDesc": "Discrete event simulation bank renege example from the Simpy Python library."
+}

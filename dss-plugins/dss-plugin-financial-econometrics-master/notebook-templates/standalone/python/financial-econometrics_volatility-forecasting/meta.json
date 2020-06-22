@@ -1,0 +1,5 @@
+// This file is the descriptor for the Python Notebook Template dss-plugin-financial-econometrics_volatility-forecasting
+{
+    "label": "Volatility forecasting",
+    "shortDesc": "Volatility forecasting example on SP500 data using the ARCH python library"
+}

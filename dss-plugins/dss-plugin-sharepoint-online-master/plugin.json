@@ -1,0 +1,16 @@
+{
+    "id": "sharepoint-online",
+    "version": "1.0.1",
+    "meta": {
+        "label": "SharePoint Online",
+        "description": "Read and write data from/to your SharePoint Online account",
+        "author": "Dataiku (Alex Bourret)",
+        "icon": "icon-cloud",
+        "tags": [
+            "Connector",
+            "Cloud"
+        ],
+        "url": "https://www.dataiku.com/product/plugins/sharepoint-online/",
+        "licenseInfo": "Apache Software License"
+    }
+}

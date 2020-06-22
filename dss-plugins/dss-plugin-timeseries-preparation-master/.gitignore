@@ -1,0 +1,8 @@
+state.json
+*.pyc
+.idea/
+.coverage
+.sonarlint
+htmlcov
+.DS_Store
+.wlock

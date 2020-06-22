@@ -1,0 +1,26 @@
+{
+    "meta" : {
+        "label" : "Trigger every n labeling",
+        "description" : "Triggers an active learning iteration every n labeling",
+        "icon" : "icon-tags"
+    },
+
+    "params": [
+        {
+            "name": "i_labeling_count",
+            "label":"Labeling count",
+            "type": "INT",
+            "defaultValue" : 100
+        },
+        {
+            "name": "ds_metadata",
+            "label": "Metadata dataset",
+            "type": "DATASET"
+        },
+        {
+            "name": "ds_queries",
+            "label": "Queries dataset",
+            "type": "DATASET"
+        }
+    ]
+}

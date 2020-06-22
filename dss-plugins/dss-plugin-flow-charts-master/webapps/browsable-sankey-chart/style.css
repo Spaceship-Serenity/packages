@@ -1,0 +1,5 @@
+@import '/plugins/flow-charts/resource/style.css';
+
+.sankey-chart rect {
+    cursor: pointer;
+}
