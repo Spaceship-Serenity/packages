@@ -1,3 +1,0 @@
-beakerx
-beakerx_databrowser
-beakerx_magics

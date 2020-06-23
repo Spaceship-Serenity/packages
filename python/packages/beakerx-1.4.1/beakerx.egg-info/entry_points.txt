@@ -1,4 +1,0 @@
-[console_scripts]
-beakerx = beakerx:run
-beakerx_databrowser = beakerx_databrowser:run
-
