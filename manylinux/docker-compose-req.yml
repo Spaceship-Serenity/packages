@@ -1,0 +1,13 @@
+---
+version: "3.3"
+
+services:
+
+    manylinux:
+        image: quay.io/pypa/manylinux1_x86_64:latest
+        # restart: unless-stopped
+        volumes:
+            - /Users/alek/Documents/Projects/packages/manylinux/build:/build
+        command: /build/build-req.sh
+        # command: /build/audit.sh
+

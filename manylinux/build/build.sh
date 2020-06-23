@@ -2,8 +2,8 @@
 set -e -u -x
 
 
-# pip="/opt/python/cp36-cp36m/bin/pip"
-pip="/opt/python/cp27-cp27m/bin/pip"
+pip="/opt/python/cp36-cp36m/bin/pip"
+# pip="/opt/python/cp27-cp27m/bin/pip"
 
 echo "$pip"
 
