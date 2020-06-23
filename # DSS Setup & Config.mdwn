@@ -34,35 +34,33 @@ python-slugify==4.0.0
 
 ## Using Jupyter Widgets
 
-Setup
+#### Setup
+
 Support for widgets needs to be enabled globally in the DSS Jupyter notebook by an administrator
+Go to the DSS data directory and run the following commands
 
-Go to the DSS data directory
+```
+cd /datadrive/data_dir && \
+JUPYTER_CONFIG_DIR="/datadrive/data_dir/jupyter-run/jupyter" JUPYTER_DATA_DIR="/datadrive/data_dir/jupyter-run/jupyter" PYTHONPATH=/datadrive/dataiku-dss-5.1.6/dku-jupyter/packages ./bin/python -m notebook.nbextensions install --py widgetsnbextension --user
+```
 
-Run the following commands, where
 
-DATADIR is the absolute path to the DSS data directory
-INSTALLDIR is the absolute path to the DSS installation directory (dataiku-dss-X.Y.Z)
-JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions install --py widgetsnbextension --user
+```
+cd /datadrive/data_dir && \
+JUPYTER_CONFIG_DIR="/datadrive/data_dir/jupyter-run/jupyter" JUPYTER_DATA_DIR="/datadrive/data_dir/jupyter-run/jupyter" PYTHONPATH=/datadrive/dataiku-dss-5.1.6/dku-jupyter/packages ./bin/python -m notebook.nbextensions enable --py widgetsnbextension
+```
 
-JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions enable --py widgetsnbextension
-Check installation:
+```
+echo export 'JUPYTER_CONFIG_DIR="$DIP_HOME/jupyter-run/jupyter"' >> /datadrive/data_dir/bin/env-site.sh
+```
 
-JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions list
-This command should have output like:
+and now just restart DSS
 
-jupyter-js-widgets/extension  enabled
- - Validating: OK
-Edit bin/env-site.sh and add the following line
+#### Using widgets
 
-export JUPYTER_CONFIG_DIR="$DIP_HOME/jupyter-run/jupyter"
-Restart DSS
-
-Using widgets
 Open a new notebook, and enter sample widget code:
 
 Note
-
 If you are using a custom code env, don’t forget to included the ipywidgets package in your code env
 
 import ipywidgets
