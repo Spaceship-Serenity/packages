@@ -1,0 +1,73 @@
+# DSS Setup & Config
+
+## Creating code env without internet
+
+Code envs will use "pip install -r requirements.txt" with a requirements.txt made of the packages you requested.
+
+By design, code envs will never try to reuse packages that are already installed at the system level (what you did with your wheel install), since the goal of code envs in DSS is to provide isolated environments.
+
+You can add custom options to the pip command line by going into the code env settings, unchecking "use global settings", and adding command line options. From the doc of pip, you should be able to install from your wheel by adding the following options:
+
+--no-index
+--find-links=/datadrive/data_dir/code-envs/packages/python/packages
+
+## Running shell commands from notebooks
+
+https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
+
+## Downloading files from the web
+
+
+## Using git
+
+## Plugin Setup
+
+### Google sheets
+
+This has a custom python code env running python 2.7 or 36
+Requirements are:
+pandas==0.20.3
+pyOpenSSL
+gspread==3.3.1
+oauth2client==4.1.3
+python-slugify==4.0.0
+
+## Using Jupyter Widgets
+
+Setup
+Support for widgets needs to be enabled globally in the DSS Jupyter notebook by an administrator
+
+Go to the DSS data directory
+
+Run the following commands, where
+
+DATADIR is the absolute path to the DSS data directory
+INSTALLDIR is the absolute path to the DSS installation directory (dataiku-dss-X.Y.Z)
+JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions install --py widgetsnbextension --user
+
+JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions enable --py widgetsnbextension
+Check installation:
+
+JUPYTER_CONFIG_DIR="$DATADIR/jupyter-run/jupyter" JUPYTER_DATA_DIR="$DATADIR/jupyter-run/jupyter"  PYTHONPATH="$INSTALLDIR/dku-jupyter/packages/" ./bin/python -m notebook.nbextensions list
+This command should have output like:
+
+jupyter-js-widgets/extension  enabled
+ - Validating: OK
+Edit bin/env-site.sh and add the following line
+
+export JUPYTER_CONFIG_DIR="$DIP_HOME/jupyter-run/jupyter"
+Restart DSS
+
+Using widgets
+Open a new notebook, and enter sample widget code:
+
+Note
+
+If you are using a custom code env, don’t forget to included the ipywidgets package in your code env
+
+import ipywidgets
+
+ipywidgets.IntSlider()
+A slider should appear. You can now use ipywidgets.
+
+https://doc.dataiku.com/dss/latest/python/ipywidgets.html
