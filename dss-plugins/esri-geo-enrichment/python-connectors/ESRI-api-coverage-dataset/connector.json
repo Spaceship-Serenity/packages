@@ -1,0 +1,10 @@
+{
+    "meta" : {
+        "label" : "ESRI(r) - Utils - Show Enrichment API coverage",
+        "author" : "Dataiku (Nicolas Gakrelidz)",
+        "tags" : []
+    },
+    "readable" : true,
+    "writable" : false,
+    "partitioningMode" : "NOT_PARTITIONABLE"
+}
