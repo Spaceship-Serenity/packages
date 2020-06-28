@@ -4,7 +4,7 @@ html:
     style:
         full_width: yes
         theme: flatly
-        primary_color: '#337ab7'
+        primary_color: '#00B0F5'
 # Minify the html
     minify_html: yes
 
@@ -14,7 +14,7 @@ html:
 title: Claimstar Profiling Report
 
 # Number of workers (0=multiprocessing.cpu_count())
-pool_size: 0
+pool_size: 8
 
 # Per variable type description settings
 vars:
@@ -41,19 +41,19 @@ sort: None
 missing_diagrams:
     bar: yes
     matrix: yes
-    heatmap: no
-    dendrogram: no
+    heatmap: yes
+    dendrogram: yes
 
 correlations:
     pearson:
-        calculate: no
+        calculate: yes
         warn_high_correlations: yes
         threshold: 0.9
     spearman:
-        calculate: no
+        calculate: yes
         warn_high_correlations: no
     kendall:
-        calculate: no
+        calculate: yes
         warn_high_correlations: no
     phi_k:
         calculate: no
@@ -63,7 +63,7 @@ correlations:
         warn_high_correlations: yes
         threshold: 0.9
     recoded:
-        calculate: no
+        calculate: yes
         warn_high_correlations: yes
         threshold: 1.0
 
@@ -74,7 +74,7 @@ categorical_maximum_correlation_distinct: 100
 plot:
 # Image format (svg or png)
     image_format: svg
-    dpi: 800
+    dpi: 600
 
     correlation:
         cmap: bwr
@@ -87,7 +87,7 @@ plot:
 
     histogram:
 # is used for numeric variables
-        bayesian_blocks_bins: no
+        bayesian_blocks_bins: yes
 
 # If 'bayesian_blocks_bins' fails to provide a valid number of bins.
         bins: 50
@@ -105,7 +105,7 @@ samples:
 # When in a Jupyter notebook
 notebook:
     iframe:
-        height: 800px
+        height: 1000px
         width: 100%
 # or 'src'
         attribute: srcdoc
