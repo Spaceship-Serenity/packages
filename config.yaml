@@ -45,7 +45,7 @@ correlations:
       calculate: True
       warn_high_correlations: False
     phi_k:
-      calculate: True
+      calculate: False
       warn_high_correlations: False
     cramers:
       calculate: True
