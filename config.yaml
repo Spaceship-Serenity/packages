@@ -41,8 +41,8 @@ sort: None
 missing_diagrams:
     bar: yes
     matrix: yes
-    heatmap: yes
-    dendrogram: yes
+    heatmap: true
+    dendrogram: true
 
 correlations:
     pearson:
