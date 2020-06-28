@@ -1,34 +1,23 @@
-html:
-
-# Styling options for the HTML report
-    style:
-        full_width: yes
-        theme: flatly
-        primary_color: '#00B0F5'
-# Minify the html
-    minify_html: yes
-
-# Offline support
-    use_local_assets: yes
 # Title of the document
-title: Claimstar Profiling Report
+title: "Pandas Profiling Report"
 
 # Number of workers (0=multiprocessing.cpu_count())
-pool_size: 8
+pool_size: 12
 
 # Per variable type description settings
 vars:
     num:
-        quantiles:
-        - 0.05
-        - 0.25
-        - 0.5
-        - 0.75
-        - 0.95
-        skewness_threshold: 20
-        low_categorical_threshold: 5
+          quantiles:
+                - 0.05
+                - 0.25
+                - 0.5
+                - 0.75
+                - 0.95
+          skewness_threshold: 20
+          low_categorical_threshold: 5
+          chi_squared_threshold: 0.999
     cat:
-        check_composition: no
+        check_composition: True
         cardinality_threshold: 50
         n_obs: 5
     bool:
@@ -39,33 +28,33 @@ sort: None
 
 # which diagrams to show
 missing_diagrams:
-    bar: yes
-    matrix: yes
-    heatmap: true
-    dendrogram: true
+    bar: True
+    matrix: True
+    heatmap: True
+    dendrogram: True
 
 correlations:
     pearson:
-        calculate: yes
-        warn_high_correlations: yes
-        threshold: 0.9
+      calculate: True
+      warn_high_correlations: True
+      threshold: 0.9
     spearman:
-        calculate: yes
-        warn_high_correlations: no
+      calculate: True
+      warn_high_correlations: False
     kendall:
-        calculate: yes
-        warn_high_correlations: no
+      calculate: True
+      warn_high_correlations: False
     phi_k:
-        calculate: no
-        warn_high_correlations: no
+      calculate: True
+      warn_high_correlations: False
     cramers:
-        calculate: no
-        warn_high_correlations: yes
-        threshold: 0.9
+      calculate: True
+      warn_high_correlations: True
+      threshold: 0.9
     recoded:
-        calculate: yes
-        warn_high_correlations: yes
-        threshold: 1.0
+      calculate: false
+      warn_high_correlations: false
+      threshold: 0.0
 
 # For categorical
 categorical_maximum_correlation_distinct: 100
@@ -73,21 +62,21 @@ categorical_maximum_correlation_distinct: 100
 # Plot-specific settings
 plot:
 # Image format (svg or png)
-    image_format: svg
+    image_format: "svg"
     dpi: 600
 
     correlation:
-        cmap: bwr
+        cmap: 'bwr'
 
     missing:
-        cmap: RdBu
+        cmap: 'RdBu'
 # Force labels when there are > 50 variables
 # https://github.com/ResidentMario/missingno/issues/93#issuecomment-513322615
-        force_labels: yes
+        force_labels: True
 
     histogram:
 # is used for numeric variables
-        bayesian_blocks_bins: yes
+        bayesian_blocks_bins: True
 
 # If 'bayesian_blocks_bins' fails to provide a valid number of bins.
         bins: 50
@@ -105,7 +94,20 @@ samples:
 # When in a Jupyter notebook
 notebook:
     iframe:
-        height: 1000px
-        width: 100%
+        height: '1000px'
+        width: '100%'
 # or 'src'
-        attribute: srcdoc
+        attribute: 'srcdoc'
+
+html:
+# Minify the html
+    minify_html: True
+
+# Offline support
+    use_local_assets: True
+
+# Styling options for the HTML report
+    style:
+      full_width: True
+      theme: "flatly"
+      primary_color: "#00B0F5"
