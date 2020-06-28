@@ -1,5 +1,5 @@
 # Title of the document
-title: "Pandas Profiling Report"
+title: "MSHP Analytics Data Profiling Report"
 
 # Number of workers (0=multiprocessing.cpu_count())
 pool_size: 12
@@ -63,7 +63,7 @@ categorical_maximum_correlation_distinct: 100
 plot:
 # Image format (svg or png)
     image_format: "svg"
-    dpi: 600
+    dpi: 800
 
     correlation:
         cmap: 'bwr'
