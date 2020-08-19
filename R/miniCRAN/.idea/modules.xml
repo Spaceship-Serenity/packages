@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../../POPHEALTH_GIT/POPHEALTH/HC_Projects/hy_reporting/.idea/hy_reporting.iml" filepath="$PROJECT_DIR$/../../../../../POPHEALTH_GIT/POPHEALTH/HC_Projects/hy_reporting/.idea/hy_reporting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/miniCRAN.iml" filepath="$PROJECT_DIR$/.idea/miniCRAN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../POPHEALTH_GIT/POPHEALTH/HC_Projects/zendesk/.idea/zendesk.iml" filepath="$PROJECT_DIR$/../../../../../POPHEALTH_GIT/POPHEALTH/HC_Projects/zendesk/.idea/zendesk.iml" />
+    </modules>
+  </component>
+</project>
